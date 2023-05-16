@@ -20,7 +20,7 @@
 </p>
  
 
-<img src="./images/serengeti.png" alt="AraT5" width="55%" height="55%" align="right"/>
+<img src="./images/serengeti.png" alt="SERENGETI: Massively Multilingual Language Models for Africa" width="55%" height="55%" align="right"/>
 ## SERENGETI: Massively Multilingual Language Models for Africa
 Multilingual pretrained language models (mPLMs) acquire valuable, generalizable linguistic information during pretraining and have advanced the state of the art on task-specific finetuning. 
 
