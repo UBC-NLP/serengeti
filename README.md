@@ -19,7 +19,7 @@
 
 </p>
  
-<img src="./serengati_languages.jpg" width="55%" height="55%" align="right">
+<img src="./images/serengati_languages.jpg" width="55%" height="55%" align="right">
 
 Multilingual pretrained language models (mPLMs) acquire valuable, generalizable linguistic information during pretraining and have advanced the state of the art on task-specific finetuning. 
 
