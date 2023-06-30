@@ -25,7 +25,7 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
 ## Citation
 If you use the pre-trained model (Serengeti) for your scientific publication, or if you find the resources in this repository useful, please cite our paper as follows (to be updated):
 ```
-@inproceedings{nagoudi-etal-2022-arat5,
+@inproceedings{adebara-etal-2022-serengeti,
   title={SERENGETI: Massively Multilingual Language Models for Africa},
   author={Adebara, Ife and Elmadany, AbdelRahim and Abdul-Mageed, Muhammad and Inciarte, Alcides Alcoba},
   journal={arXiv preprint arXiv:2212.10785},
