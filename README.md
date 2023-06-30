@@ -5,14 +5,9 @@
 <p>
 
 <p align="center">
-<a href="https://github.com/UBC-NLP/serengeti/releases">
-        <img alt="GitHub release" src="https://img.shields.io/github/release/UBC-NLP/serengeti.svg">
-    </a>
-
 <a href="https://huggingface.co/UBC-NLP/serengeti">
         <img alt="Documentation" src="https://img.shields.io/website.svg?down_color=red&down_message=offline&up_message=online&url=https://huggingface.co/UBC-NLP/serengeti">
     </a>
-<a href="https://github.com/UBC-NLP/serengeti/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/UBC-NLP/serengeti?logoColor=blue"></a>
 <a href="https://github.com/UBC-NLP/serengeti/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/UBC-NLP/serengeti"></a>
 <a href="https://github.com/UBC-NLP/serengeti/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/UBC-NLP/serengeti"></a>
 
