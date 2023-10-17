@@ -155,24 +155,31 @@ Metric is F1
 
 #  3. How to use Serengeti model
 
-Below is an example for fine-tuning **Serengeti** for News Classification on the AfroNLU dataset 
+Below is an example for fine-tuning **Serengeti** for news Classification on the AfroNLU dataset 
 ``` bash
-!python run_trainier_seq2seq_huggingface.py \
+!python run_classification.py \
+        --model_name_or_path "UBC-NLP/serengeti"\
+        --text_column_name "sentence" \
+        --label_column_name "lang" \
+        --train_file "train.json" \
+        --validation_file "valid.json" \
+        --test_file "test.json" \
+        --do_train \
+        --do_eval \
+        --do_predict \
+        --max_seq_length 128 \
+        --per_device_train_batch_size 8 \
+        --per_device_eval_batch_size 8 \
         --learning_rate 5e-5 \
-        --max_target_length 128 --max_source_length 128 \
-        --per_device_train_batch_size 8 --per_device_eval_batch_size 8 \
-        --model_name_or_path "UBC-NLP/AraT5-base" \
-        --output_dir "/content/AraT5_FT_title_generation" --overwrite_output_dir \
-        --num_train_epochs 3 \
-        --train_file "/content/ARGEn_title_genration_sample_train.tsv" \
-        --validation_file "/content/ARGEn_title_genration_sample_valid.tsv" \
-        --task "title_generation" --text_column "document" --summary_column "title" \
-        --load_best_model_at_end --metric_for_best_model "eval_bleu" --greater_is_better True --evaluation_strategy epoch --logging_strategy epoch --predict_with_generate\
-        --do_train --do_eval
+        --num_train_epochs 15 \
+        --load_best_model_at_end --greater_is_better True --evaluation_strategy epoch --logging_strategy epoch \
+        --save_total_limit 1 \
+        --save_strategy epoch \
+        --cache_dir "cache" \
+        --output_dir "output_dir"
 ```
-For the more details about the fine-tuning example, please read this notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/UBC-NLP/araT5/blob/main/examples/Fine_tuning_AraT5.ipynb) 
 
-In addition, we release the fine-tuned checkpoint of the News Title Generation (NGT) which is described in the paper. The model available at Huggingface ([UBC-NLP/AraT5-base-title-generation](https://huggingface.co/UBC-NLP/AraT5-base-title-generation)).
+For the more details about the fine-tuning example, please read this notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/UBC-NLP/serengeti/blob/main/Serengeti_notebook.ipynb) 
 
 ## 4. Ethics
  
