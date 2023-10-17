@@ -78,13 +78,13 @@ AfroNLU includes the following tasks: ```named entity recognition```,  ```phrase
 |  MasakaNER-v1 [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                   |81.41<sup>±0.26</sup> |78.57<sup>±0.53</sup> |84.16<sup>±0.45</sup> |81.42<sup>±0.30</sup> |81.23<sup>±0.32</sup> |81.54<sup>±0.68</sup> |**84.53<sup>±0.56</sup>** |
 |  MasakaNER-v2 [Ifeoluwa Adelani et al., 2022](https://aclanthology.org/2022.emnlp-main.298/)    |87.17<sup>±0.18</sup> |84.82<sup>±0.96</sup>  |88.69<sup>±0.12</sup> |86.22<sup>±0.06</sup>  |86.57<sup>±0.27</sup> |86.69<sup>±0.29</sup> |**88.86<sup>±0.25</sup>** |      
 |  MasakaNER-east*                                      | 80.38<sup>±0.56</sup> | 78.33<sup>±1.25</sup> |  83.02<sup>±0.31</sup> |  79.31<sup>±0.92</sup> | 80.53<sup>±0.71</sup> | 81.26<sup>±0.68</sup> | **83.75<sup>±0.26</sup>** |       
-|  MasakaNER-eastwest* | 82.85<sup>±0.38</sup> | 82.37<sup>±0.90</sup> | **86.31<sup>±0.30</sup>**  | 82.98<sup>±0.44</sup> |  82.90<sup>±0.49</sup> | 83.67<sup>±0.44</sup> | 85.94<sup>±0.27</sup> |      
-|  MasakaNER-west⋆    | 82.85<sup>±0.79</sup> | 83.99<sup>±0.39</sup>  | **86.78<sup>±0.44</sup>** | 84.08<sup>±0.32</sup>  | 82.06<sup>±0.67</sup> | 83.45<sup>±0.81</sup> | 86.27<sup>±0.94</sup> |      
+|  MasakaNER-eastwest | 82.85<sup>±0.38</sup> | 82.37<sup>±0.90</sup> | **86.31<sup>±0.30</sup>**  | 82.98<sup>±0.44</sup> |  82.90<sup>±0.49</sup> | 83.67<sup>±0.44</sup> | 85.94<sup>±0.27</sup> |      
+|  MasakaNER-west    | 82.85<sup>±0.79</sup> | 83.99<sup>±0.39</sup>  | **86.78<sup>±0.44</sup>** | 84.08<sup>±0.32</sup>  | 82.06<sup>±0.67</sup> | 83.45<sup>±0.81</sup> | 86.27<sup>±0.94</sup> |      
 |  NCHLT-NER     [(SADiLaR)](https://www.sadilar.org/)| 71.41<sup>±0.07</sup> | 70.58<sup>±0.26</sup>  | 72.27<sup>±0.14</sup>  | 68.74<sup>±0.29</sup>  | 64.46<sup>±0.37</sup> | 64.42<sup>±0.24</sup> | **73.18<sup>±0.24</sup>** |       
 |  Yoruba-Twi-NER  [Alabi et al., 2020](https://aclanthology.org/2020.lrec-1.335/)     | 61.18<sup>±2.19</sup> |  70.37<sup>±0.61</sup>  | 58.48<sup>±1.85</sup>  | 69.24<sup>±3.05</sup> | 61.77<sup>±1.24 | 57.99<sup>±2.61</sup> | **71.25<sup>±1.73</sup>** | 
 |  WikiAnn  [(Pan et al.2017; Rahimi et al., 2019)](https://aclanthology.org/P19-1015/)     | 83.82<sup>±0.39</sup> | 82.65<sup>±0.77</sup> | 86.01<sup>±0.83</sup>  | 83.05<sup>±0.20</sup> | 83.17<sup>±0.54</sup> | 84.85<sup>±0.53</sup> | **85.83<sup>±0.94</sup>** | 
 
-* refers to splits from [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)
+
 Metric is F1. 
 
 #### 2.2  Phrase Chuncking
