@@ -38,9 +38,8 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
   - [2.8 Language Identification](#28-language-identification) 
 - [3. How to use Serengeti model](#3-how-to-use-serengeti-model)
 - [4. Ethics](#4-ethics)
-- [5. Serengeti Models Checkpoints](#5-serengeti-models-checkpoints)
-- [6. Citation](#6-citation)
-- [7. Acknowledgments](#7-acknowledgments)
+- [5. Citation](#6-citation)
+- [6. Acknowledgments](#7-acknowledgments)
 
 ## 1. Our Language Models
 ## 1.1 Training Data
@@ -56,10 +55,15 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
 
 To train our Serengeti, we use the same architecture as ```Electra``` [(Chi etal, 2022)](https://aclanthology.org/2022.acl-long.427/) and  ```XLMR``` [(Conneau etal, 2020)](https://aclanthology.org/2020.acl-main.747/). We experiment with different vocabulary sizes for the Electra models and name them Serengeti-E110 and Serengeti-E250 with 110K and 250K respectively. Each of these models has 12 layers and 12 attention heads. We pretrain each model for 40 epochs with a sequence length of 512, a learning rate of 2e − 4 and a batch size of 216 and 104 for the SERENGETI-E110 and SERENGETI-E250, respectively. We train the XLMR-base model, which we refer to henceforth as Serengeti with a 250K vocabulary size for 20 epochs. This model has 12 layers and 12 attention heads, a sequence length of 512 and a batch size of 8. Serengeti outperforms both Electra models. 
 
-## 1.3 Serengeti Models 
-*  **Serengeti-E100**: Electra with 100k vocabulary size
-*  **Serengeti-E250**: Electra with 250k vocabulary size, 
-*  **Serengeti**:  XLMR-base model.
+## 1.3.  Serengeti Models 
+
+Serengeti Pytorch and Tenserflow checkpoints are available on Huggingface website for direct download and use ```exclusively for research```. `For commercial use, please contact the authors via email @ (*muhammad.mageed[at]ubc[dot]ca*).`
+
+| **Model**   | **Link** | 
+|---------|:------------------:|
+| **Serengeti-E110**: Electra with 100k vocabulary size  |     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti-E110/tree/main)     |     
+| **Serengeti-E250**: Electra with 250k vocabulary size  |   [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti-E250/tree/main)    |      
+| 🔥**Serengeti**🔥: XLMR-base model|     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti/tree/main)       | 
 
 
 ## 2. AfroNLU Benchmark and Evaluation
@@ -157,26 +161,36 @@ Metric is F1
 
 Below is an example for fine-tuning **Serengeti** for news Classification on the AfroNLU dataset 
 ``` bash
-!python run_classification.py \
-        --model_name_or_path "UBC-NLP/serengeti"\
-        --text_column_name "sentence" \
-        --label_column_name "lang" \
-        --train_file "train.json" \
-        --validation_file "valid.json" \
-        --test_file "test.json" \
-        --do_train \
-        --do_eval \
-        --do_predict \
-        --max_seq_length 128 \
-        --per_device_train_batch_size 8 \
-        --per_device_eval_batch_size 8 \
-        --learning_rate 5e-5 \
-        --num_train_epochs 15 \
-        --load_best_model_at_end --greater_is_better True --evaluation_strategy epoch --logging_strategy epoch \
-        --save_total_limit 1 \
-        --save_strategy epoch \
-        --cache_dir "cache" \
-        --output_dir "output_dir"
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+
+tokenizer = AutoTokenizer.from_pretrained("UBC-NLP/serengeti", use_auth_token="XXX")
+
+model = AutoModelForMaskedLM.from_pretrained("UBC-NLP/serengeti", use_auth_token="XXX")
+from transformers import pipeline
+
+classifier = pipeline("fill-mask", model=model, tokenizer=tokenizer)
+classifier("ẹ jọwọ , ẹ <mask> mi") #Yoruba
+[{'score': 0.07887924462556839,
+  'token': 8418,
+  'token_str': 'ọmọ',
+  'sequence': 'ẹ jọwọ, ẹ ọmọ mi'},
+ {'score': 0.04658124968409538,
+  'token': 156595,
+  'token_str': 'fẹ́ràn',
+  'sequence': 'ẹ jọwọ, ẹ fẹ́ràn mi'},
+ {'score': 0.029315846040844917,
+  'token': 204050,
+  'token_str': 'gbàgbé',
+  'sequence': 'ẹ jọwọ, ẹ gbàgbé mi'},
+ {'score': 0.02790883742272854,
+  'token': 10730,
+  'token_str': 'kọ',
+  'sequence': 'ẹ jọwọ, ẹ kọ mi'},
+ {'score': 0.022904086858034134,
+  'token': 115382,
+  'token_str': 'bẹ̀rù',
+  'sequence': 'ẹ jọwọ, ẹ bẹ̀rù mi'}]
+
 ```
 
 For the more details about the fine-tuning example, please read this notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/UBC-NLP/serengeti/blob/main/Serengeti_notebook.ipynb) 
@@ -189,17 +203,6 @@ Serengeti aligns with Afrocentric NLP where the needs of African people is put i
 - Serengeti affords opportunities for language preservation for many African languages. To the best of our knowledge, Serengeti consists of languages that have not been used for any NLP task until now. We believe that it can help encourage  continued use of these languages in several domains, as well as trigger future development of language technologies for many of these languages.
 - To mitigate discrimination and bias, we adopt a manual curation of our datasets. Native speakers of Afrikaans, Yorùbá, Igbo, Hausa, Luganda, Kinyarwanda, Chichewa, Shona, Somali, Swahili, Xhosa, Bemba, and Zulu also manually evaluated a subset of the data to ensure its quality. The data collected for this work is taken from various domains to further ensure a better representation of the language usage of native speakers.
 - Although LMs are useful for a wide range of applications, they can also be misused. Serengeti is developed using publicly available datasets that may carry biases. Although we strive to perform analyses and diagnostic case studies to probe performance of our models, our investigations are by no means comprehensive nor guarantee absence of bias in the data. In particular, we do not have access to native speakers of most of the languages covered. This hinders our ability to investigate samples from each (or at least the majority) of the languages.
-
-# 5.  Serengeti Models Checkpoints 
-
-Serengeti Pytorch and Tenserflow checkpoints are available on Huggingface website for direct download and use ```exclusively for research```. `For commercial use, please contact the authors via email @ (*muhammad.mageed[at]ubc[dot]ca*).`
-
-| **Model**   | **Link** | 
-|---------|:------------------:|
-| **Serengeti-E110**  |     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti-E110/tree/main)     |     
-| **Serengeti-E250**  |   [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti-E250/tree/main)    |      
-| 🔥**Serengeti**🔥|     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti/tree/main)       | 
-
 
 ## Citation
 If you use the pre-trained model (Serengeti) for your scientific publication, or if you find the resources in this repository useful, please cite our paper as follows (to be updated):
