@@ -26,8 +26,8 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
 - [1 Our Language Models](#1-Our-Language-Models)
   - [1.1 Training Data](#11-training-data)
   - [1.2 Models Architecture](#12-models-architecture)
-  - [1.3 AraT5 Models](#13-arat5-models)
-- [2. ARGEN Benchmark and AraT5 Evaluation](#2-our-benchmark-ARGEN)
+  - [1.3 Serengeti Models](#13-serengeti-models)
+- [2. AfroNLU Benchmark and Evaluation](#2-our-benchmark-AfroNLU)
   - [2.1 Machine Translation](#21-machine-translation)
   - [2.2 Text Summarization](#22-text-summarization)
   - [2.3 News Title and Question Generation](#23-news-title-and-question-generation)
@@ -40,9 +40,6 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
 - [7. Acknowledgments](#7-acknowledgments)
 
 ## 1. Our Language Models
-
-
-
 ## 1.1 Training Data
 
 * **Serengeti Training Data**: SERENGETI is pretrained using 42GB of data comprising a multi-domain, multi-script collection. The multi-domain dataset comprises texts from religious, news, government documents, health documents, and existing corpora written in five scripts from the set {Arabic, Coptic, Ethiopic, Latin, and Vai}. 
@@ -54,7 +51,7 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
 
 ## 1.2 Models Architecture
 
-To train our Serengeti, we use the same architecture as ```Electra``` [(Chi etal, 2022)](https://aclanthology.org/2022.acl-long.427/) and  ```XLMR``` [(Conneau etal, 2020)]([https://arxiv.org/abs/1910.10683](https://aclanthology.org/2020.acl-main.747/)). We experiment with different vocabulary sizes for the Electra models and name them Serengeti-E110 and Serengeti-E250 with 110K and 250K respectively. Each of these models has 12 layers and 12 attention heads. We pretrain each model for 40 epochs with a sequence length of 512, a learning rate of 2e − 4 and a batch size of 216 and 104 for the SERENGETI-E110 and SERENGETI-E250, respectively. We train the XLMR-base model, which we refer to henceforth as Serengeti with a 250K vocabulary size for 20 epochs. This model has 12 layers and 12 attention heads, a sequence length of 512 and a batch size of 8. Serengeti outperforms both Electra models. 
+To train our Serengeti, we use the same architecture as ```Electra``` [(Chi etal, 2022)](https://aclanthology.org/2022.acl-long.427/) and  ```XLMR``` [(Conneau etal, 2020)](https://aclanthology.org/2020.acl-main.747/). We experiment with different vocabulary sizes for the Electra models and name them Serengeti-E110 and Serengeti-E250 with 110K and 250K respectively. Each of these models has 12 layers and 12 attention heads. We pretrain each model for 40 epochs with a sequence length of 512, a learning rate of 2e − 4 and a batch size of 216 and 104 for the SERENGETI-E110 and SERENGETI-E250, respectively. We train the XLMR-base model, which we refer to henceforth as Serengeti with a 250K vocabulary size for 20 epochs. This model has 12 layers and 12 attention heads, a sequence length of 512 and a batch size of 8. Serengeti outperforms both Electra models. 
 
 ## 1.3 Serengeti Models 
 *  **Serengeti-E100**: Electra with 100k vocabulary size
@@ -69,8 +66,8 @@ AfroNLU includes the following tasks: ```named entity recognition```,  ```phrase
 ### 2.1 
 #### 2.1.1  Named Entity Recognition
 
-| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGET** | 
-|----------------|:------:|:----------:|:-----------:|:-------:|:------:|:-------:|:------:|
+| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
+|----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
 |  MasakaNER-v1 [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                   |81.41±0.26 |  78.57 ±0.53 |  84.16 ±0.45 |  81.42 ±0.30 | 81.23 ±0.32 | 81.54 ±0.68 | **84.53 ±0.56** |
 |  MasakaNER-v2 [Ifeoluwa Adelani et al., 2021](https://aclanthology.org/2022.emnlp-main.298/)    | 87.17 ±0.18 | 84.82±0.96  | 88.69 ±0.12 | 86.22 ±0.06  | 86.57 ±0.27 | 86.69 ±0.29 | **88.86 ±0.25** |      
 |  masakaner-east    [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                                     | 80.38 ±0.56 | 78.33 ±1.25 |  83.02 ±0.31 |  79.31 ±0.92 | 80.53 ±0.71 | 81.26 ±0.68 | **83.75 ±0.26** |       
