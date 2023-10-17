@@ -36,9 +36,9 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
   - [2.6 Topic Classification](#26-topic-classification)
   - [2.7 Question Answering](#27-question-answering)
   - [2.8 Language Identification](#28-language-identification) 
-- [3. How to use AraT5 model](#3-how-to-use-arat5-model)
+- [3. How to use Serengeti model](#3-how-to-use-serengeti-model)
 - [4. Ethics](#4-ethics)
-- [5. AraT5 Models Checkpoints](#5-arat5-models-checkpoints)
+- [5. Serengeti Models Checkpoints](#5-serengeti-models-checkpoints)
 - [6. Citation](#6-citation)
 - [7. Acknowledgments](#7-acknowledgments)
 
