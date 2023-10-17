@@ -175,14 +175,13 @@ For the more details about the fine-tuning example, please read this notebook [!
 In addition, we release the fine-tuned checkpoint of the News Title Generation (NGT) which is described in the paper. The model available at Huggingface ([UBC-NLP/AraT5-base-title-generation](https://huggingface.co/UBC-NLP/AraT5-base-title-generation)).
 
 ## 4. Ethics
-
-Our models are developed using data from the public domain. 
-We provide access to our models to accelerate scientific research with no liability on our part.
-Please use our models and benchmark only ethically.
-This includes, for example, respect and protection of people's privacy.
-We encourage all researchers who decide to use our models to adhere to the highest standards.
-For example, if you apply our models on Twitter data, we encourage you to review Twitter policy at [Twitter policy](https://developer.twitter.com/en/developer-terms/agreement-and-policy). For example, Twitter provides the following policy around use of [sensitive information](https://developer.twitter.com/en/developer-terms/more-on-restricted-use-cases): 
-
+ 
+Serengeti aligns with Afrocentric NLP where the needs of African people is put into consideration when developing technology. We believe Serengeti will not only be useful to speakers of the languages supported, but also researchers of African languages such as anthropologists and linguists. We discuss below some use cases for Serengeti and offer a number of broad impacts.
+- Serengeti aims to address the lack of access to technology in about 90\% of the world's languages, which automatically discriminates against native speakers of those languages. More precisely, it does so by focusing on Africa. To the best of our knowledge, Serengeti is the first massively multilingual PLM developed for African languages and language varieties. A model with knowledge of 517 African languages, is by far the largest to date for African NLP. 
+- Serengeti enables improved access of important information to the African community in Indigenous African languages. This is especially beneficial for people who may not be fluent in other languages. This will potentially connect more people globally. 
+- Serengeti affords opportunities for language preservation for many African languages. To the best of our knowledge, Serengeti consists of languages that have not been used for any NLP task until now. We believe that it can help encourage  continued use of these languages in several domains, as well as trigger future development of language technologies for many of these languages.
+- To mitigate discrimination and bias, we adopt a manual curation of our datasets. Native speakers of Afrikaans, Yorùbá, Igbo, Hausa, Luganda, Kinyarwanda, Chichewa, Shona, Somali, Swahili, Xhosa, Bemba, and Zulu also manually evaluated a subset of the data to ensure its quality. The data collected for this work is taken from various domains to further ensure a better representation of the language usage of native speakers.
+- Although LMs are useful for a wide range of applications, they can also be misused. Serengeti is developed using publicly available datasets that may carry biases. Although we strive to perform analyses and diagnostic case studies to probe performance of our models, our investigations are by no means comprehensive nor guarantee absence of bias in the data. In particular, we do not have access to native speakers of most of the languages covered. This hinders our ability to investigate samples from each (or at least the majority) of the languages.
 
 # 5.  Serengeti Models Checkpoints 
 
@@ -190,8 +189,8 @@ Serengeti Pytorch and Tenserflow checkpoints are available on Huggingface websit
 
 | **Model**   | **Link** | 
 |---------|:------------------:|
-| **Serengeti-E110**  |     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/)     |     
-| **Serengeti-E250**  |   [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/)    |      
+| **Serengeti-E110**  |     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti-E110/tree/main)     |     
+| **Serengeti-E250**  |   [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti-E250/tree/main)    |      
 | 🔥**Serengeti**🔥|     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti/tree/main)       | 
 
 
