@@ -153,9 +153,9 @@ We evaluate only Serengeti on the language identification datasets listed below 
 |  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Yoruba (yor) | 82.00 |  **98.96±0.00** |
 Metric is F1
 
-#  3. How to use AraT5 model
+#  3. How to use Serengeti model
 
-Below is an example for fine-tuning **AraT5-base** for News Title Generation on the Aranews dataset 
+Below is an example for fine-tuning **Serengeti** for News Classification on the AfroNLU dataset 
 ``` bash
 !python run_trainier_seq2seq_huggingface.py \
         --learning_rate 5e-5 \
@@ -183,48 +183,38 @@ This includes, for example, respect and protection of people's privacy.
 We encourage all researchers who decide to use our models to adhere to the highest standards.
 For example, if you apply our models on Twitter data, we encourage you to review Twitter policy at [Twitter policy](https://developer.twitter.com/en/developer-terms/agreement-and-policy). For example, Twitter provides the following policy around use of [sensitive information](https://developer.twitter.com/en/developer-terms/more-on-restricted-use-cases): 
 
-### Sensitive information
 
-You should be careful about using Twitter data to derive or infer potentially sensitive characteristics about Twitter users. Never derive or infer, or store derived or inferred, information about a Twitter user’s:
+# 5.  Serengeti Models Checkpoints 
 
-- Health (including pregnancy)
-- Negative financial status or condition
-- Political affiliation or beliefs
-- Racial or ethnic origin
-- Religious or philosophical affiliation or beliefs
-- Sex life or sexual orientation
-- Trade union membership
-- Alleged or actual commission of a crime
-- Aggregate analysis of Twitter content that does not store any personal data (for example, user IDs, usernames, and other identifiers) is permitted, provided that the analysis also complies with applicable laws and all parts of the Developer Agreement and Policy.
-
-# 5.  AraT5 Models Checkpoints 
-
-AraT5 Pytorch and Tenserflow checkpoints are available on Huggingface website for direct download and use ```exclusively for research```. `For commercial use, please contact the authors via email @ (*muhammad.mageed[at]ubc[dot]ca*).`
+Serengeti Pytorch and Tenserflow checkpoints are available on Huggingface website for direct download and use ```exclusively for research```. `For commercial use, please contact the authors via email @ (*muhammad.mageed[at]ubc[dot]ca*).`
 
 | **Model**   | **Link** | 
 |---------|:------------------:|
-|  **AraT5-base** |     [https://huggingface.co/UBC-NLP/AraT5-base](https://huggingface.co/UBC-NLP/AraT5-base)       | 
-| **AraT5-msa-base**  |     [https://huggingface.co/UBC-NLP/AraT5-msa-base](https://huggingface.co/UBC-NLP/AraT5-msa-base)     |     
-| **AraT5-tweet-base**  |   [https://huggingface.co/UBC-NLP/AraT5-tweet-base](https://huggingface.co/UBC-NLP/AraT5-tweet-base)    |      
-| **AraT5-msa-small** |     [https://huggingface.co/UBC-NLP/AraT5-msa-small](https://huggingface.co/UBC-NLP/AraT5-msa-small)   |     
-| **AraT5-tweet-small**|    [https://huggingface.co/UBC-NLP/AraT5-tweet-small](https://huggingface.co/UBC-NLP/AraT5-tweet-small) |  
-| **Title generation model**|    [https://huggingface.co/UBC-NLP/AraT5-base-title-generation](https://huggingface.co/UBC-NLP/AraT5-base-title-generation) | 
-|🔥**AraT5v2-base-1024**🔥| [https://huggingface.co/UBC-NLP/AraT5v2-base-1024](https://huggingface.co/UBC-NLP/AraT5v2-base-1024) |
+| **Serengeti-E110**  |     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/)     |     
+| **Serengeti-E250**  |   [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/)    |      
+| 🔥**Serengeti**🔥|     [https://huggingface.co/UBC-NLP/Serengeti](https://huggingface.co/UBC-NLP/serengeti/tree/main)       | 
 
 
 ## Citation
 If you use the pre-trained model (Serengeti) for your scientific publication, or if you find the resources in this repository useful, please cite our paper as follows (to be updated):
 ```
-@inproceedings{adebara-etal-2022-serengeti,
-  title={SERENGETI: Massively Multilingual Language Models for Africa},
-  author={Adebara, Ife and Elmadany, AbdelRahim and Abdul-Mageed, Muhammad and Inciarte, Alcides Alcoba},
-  journal={arXiv preprint arXiv:2212.10785},
-  year={2022}
+@inproceedings{adebara-etal-2023-serengeti,
+    title = "{SERENGETI}: Massively Multilingual Language Models for {A}frica",
+    author = "Adebara, Ife  and
+      Elmadany, AbdelRahim  and
+      Abdul-Mageed, Muhammad  and
+      Alcoba Inciarte, Alcides",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.97",
+    doi = "10.18653/v1/2023.findings-acl.97",
+    pages = "1498--1537",
 }
 
 ```
-
-
 
 ## Acknowledgments
 We gratefully acknowledges support from Canada Research Chairs (CRC), the Natural Sciences and Engineering Research Council of Canada (NSERC; RGPIN-2018-04267), the Social Sciences and Humanities Research Council of Canada (SSHRC; 435-2018-0576; 895-2020-1004; 895-2021-1008), Canadian Foundation for Innovation (CFI; 37771), [Digital Research Alliance of Canada](https://alliancecan.ca), [UBC ARC-Sockeye](https://arc.ubc.ca/ubc-arc-sockeye), Advanced Micro Devices, Inc. (AMD), and Google. Any opinions, conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of CRC, NSERC, SSHRC, CFI, the Alliance, AMD, Google, or UBC ARC-Sockeye.
