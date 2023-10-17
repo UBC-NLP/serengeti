@@ -90,7 +90,7 @@ Metric is F1.
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
-|  Phrase-Chunk [(SADiLaR)](https://www.sadilar.org/)                  | 88.86±0.18 | 88.65±0.06 | 90.12±0.12 | 87.86±0.20 | 90.39±0.21 | 89.93±0.33 | **90.51±0.04** |
+|  Phrase-Chunk [(SADiLaR)](https://www.sadilar.org/)                  | 88.86<sup>±0.18</sup> | 88.65<sup>±0.06</sup> | 90.12<sup>±0.12</sup> | 87.86<sup>±0.20</sup> | 90.39<sup>±0.21</sup> | 89.93<sup>±0.33</sup> | **90.51<sup>±0.04</sup>** |
 
 Metric is F1. 
 
@@ -98,7 +98,7 @@ Metric is F1.
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
-|  POS-tagging [(Onyenwe et al., 2018,2019)](https://dl.acm.org/doi/10.1145/3146387)                 | 85.50±0.08 |  85.42±0.13 | 85.39±0.21 | 85.43±0.05 | 85.50±0.16 | **85.61±0.13** | 85.54±0.08 |
+|  POS-tagging [(Onyenwe et al., 2018,2019)](https://dl.acm.org/doi/10.1145/3146387)                 | 85.50<sup>±0.08</sup>  |  85.42<sup>±0.13</sup>  | 85.39<sup>±0.21</sup> | 85.43<sup>±0.05</sup> | 85.50<sup>±0.16</sup> | **85.61<sup>±0.13</sup>** | 85.54<sup>±0.08</sup> |
      
 Metric is F1. 
 
