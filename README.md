@@ -34,7 +34,8 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
   - [2.4 News Classification](#24-news-classification)
   - [2.5 Sentiment Analysis](#25-sentiment-analysis)
   - [2.6 Topic Classification](#26-topic-classification)
-  - [2.7 Question Answering](#27-question-answering) 
+  - [2.7 Question Answering](#27-question-answering)
+  - [2.8 Language Identification](#28-language-identification) 
 - [3. How to use AraT5 model](#3-how-to-use-arat5-model)
 - [4. Ethics](#4-ethics)
 - [5. AraT5 Models Checkpoints](#5-arat5-models-checkpoints)
@@ -132,6 +133,25 @@ Metric is F1
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
 |  QA-Swahili [ (Clark et al., 2020a)](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00317/96451/TyDi-QA-A-Benchmark-for-Information-Seeking)    | 82.79±1.93 |  **83.40±0.78** | 79.94±0.39 | 57.3±1.8 |  79.76±0.52 | 81.25±1.33 | 80.01±0.78 |
+
+Metric is F1
+
+#### 2.8  Language Identification
+We evaluate only Serengeti on the language identification datasets listed below and compare the results with AfroLID:
+
+| **Dataset**  |  **AfroLID** | **Serengeti** | 
+|----------------|:---------:|:-------------:|
+|  AfroLID [(Adebara et al., 2022b)](https://aclanthology.org/2022.emnlp-main.128.pdf)    | 96.14 | **97.64±0.02** |
+
+| **Dataset**  |  **Split** | **AfroLID** | **Serengeti** | 
+|----------------|:---------:|:-------------:|:---------:|
+|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Amharic (amh) | 97.00 |  **99.50±0.01** |
+|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Hausa (hau)  | 89.00 |  **98.09±0.02** |
+|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Igbo  (ibo) | 46.00 | **95.28±0.00** |
+|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Nigerian Pidgin (pcm)   | 56.00 |  **77.73±0.01** |
+|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Swahili (swh)  | 96.00 |  **98.66±0.02** |
+|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Yoruba (yor) | 82.00 |  **98.96±0.00** |
+Metric is F1
 
 #  3. How to use AraT5 model
 
