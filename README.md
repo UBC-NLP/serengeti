@@ -28,11 +28,13 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
   - [1.2 Models Architecture](#12-models-architecture)
   - [1.3 Serengeti Models](#13-serengeti-models)
 - [2. AfroNLU Benchmark and Evaluation](#2-our-benchmark-AfroNLU)
-  - [2.1 Machine Translation](#21-machine-translation)
-  - [2.2 Text Summarization](#22-text-summarization)
-  - [2.3 News Title and Question Generation](#23-news-title-and-question-generation)
-  - [2.4 Paraphrasing and Transliteration](#24-paraphrasing-and-transliteration)
-  - [2.5 Code-Switched Translation](#25-code-switched-translation) 
+  - [2.1 Named Entity Recognition](#21-named-entity-recognition)
+  - [2.2 Phrase Chuncking](#22-phrase-chuncking)
+  - [2.3 Part of Speech Tagging](#23-part-of-speech-tagging)
+  - [2.4 News Classification](#24-news-classification)
+  - [2.5 Sentiment Analysis](#25-sentiment-analysis)
+  - [2.6 Topic Classification](#26-topic-classification)
+  - [2.7 Question Answering](#27-question-answering) 
 - [3. How to use AraT5 model](#3-how-to-use-arat5-model)
 - [4. Ethics](#4-ethics)
 - [5. AraT5 Models Checkpoints](#5-arat5-models-checkpoints)
@@ -69,25 +71,23 @@ AfroNLU includes the following tasks: ```named entity recognition```,  ```phrase
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
 |  MasakaNER-v1 [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                   |81.41±0.26 |  78.57 ±0.53 |  84.16 ±0.45 |  81.42 ±0.30 | 81.23 ±0.32 | 81.54 ±0.68 | **84.53 ±0.56** |
-|  MasakaNER-v2 [Ifeoluwa Adelani et al., 2021](https://aclanthology.org/2022.emnlp-main.298/)    | 87.17 ±0.18 | 84.82±0.96  | 88.69 ±0.12 | 86.22 ±0.06  | 86.57 ±0.27 | 86.69 ±0.29 | **88.86 ±0.25** |      
-|  masakaner-east    [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                                     | 80.38 ±0.56 | 78.33 ±1.25 |  83.02 ±0.31 |  79.31 ±0.92 | 80.53 ±0.71 | 81.26 ±0.68 | **83.75 ±0.26** |       
-|  masakaner-eastwest  [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85 ±0.38 | 82.37 ±0.90 | **86.31 ±0.30**  | 82.98 ±0.44 |  82.90 ±0.49 | 83.67 ±0.44 | 85.94 ±0.27 |      
-|  masakaner-west⋆   [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85±0.79 | 83.99 ±0.39  | **86.78 ±0.44** | 84.08 ±0.32  | 82.06 ±0.67 | 83.45 ±0.81 | 86.27 ±0.94 |      
-|  nchlt-ner     [(SADiLaR)](https://www.sadilar.org/)| 71.41 ±0.07 | 70.58 ±0.26  | 72.27 ±0.14  | 68.74 ±0.29  | 64.46 ±0.37 | 64.42 ±0.24 | **73.18 ±0.24** |       
-|  yoruba-twi-ner  [Alabi et al., 2020](https://aclanthology.org/2020.lrec-1.335/)     | 61.18 ±2.19 |  70.37 ±0.61  | 58.48 ±1.85  | 69.24 ±3.05 | 61.77 ±1.24 | 57.99 ±2.61 | **71.25 ±1.73** | 
-|  wikiann  [(Pan et al.2017; Rahimi et al., 2019)](https://aclanthology.org/P19-1015/)     | 83.82 ±0.39 | 82.65 ±0.77 | 86.01 ±0.83  | 83.05 ±0.20 | 83.17 ±0.54 | 84.85 ±0.53 | **85.83 ±0.94** | 
+|  MasakaNER-v2 [Ifeoluwa Adelani et al., 2022](https://aclanthology.org/2022.emnlp-main.298/)    | 87.17 ±0.18 | 84.82±0.96  | 88.69 ±0.12 | 86.22 ±0.06  | 86.57 ±0.27 | 86.69 ±0.29 | **88.86 ±0.25** |      
+|  MasakaNER-east    [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                                     | 80.38 ±0.56 | 78.33 ±1.25 |  83.02 ±0.31 |  79.31 ±0.92 | 80.53 ±0.71 | 81.26 ±0.68 | **83.75 ±0.26** |       
+|  MasakaNER-eastwest  [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85 ±0.38 | 82.37 ±0.90 | **86.31 ±0.30**  | 82.98 ±0.44 |  82.90 ±0.49 | 83.67 ±0.44 | 85.94 ±0.27 |      
+|  MasakaNER-west⋆   [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85±0.79 | 83.99 ±0.39  | **86.78 ±0.44** | 84.08 ±0.32  | 82.06 ±0.67 | 83.45 ±0.81 | 86.27 ±0.94 |      
+|  NCHLT-NER     [(SADiLaR)](https://www.sadilar.org/)| 71.41 ±0.07 | 70.58 ±0.26  | 72.27 ±0.14  | 68.74 ±0.29  | 64.46 ±0.37 | 64.42 ±0.24 | **73.18 ±0.24** |       
+|  Yoruba-Twi-NER  [Alabi et al., 2020](https://aclanthology.org/2020.lrec-1.335/)     | 61.18 ±2.19 |  70.37 ±0.61  | 58.48 ±1.85  | 69.24 ±3.05 | 61.77 ±1.24 | 57.99 ±2.61 | **71.25 ±1.73** | 
+|  WikiAnn  [(Pan et al.2017; Rahimi et al., 2019)](https://aclanthology.org/P19-1015/)     | 83.82 ±0.39 | 82.65 ±0.77 | 86.01 ±0.83  | 83.05 ±0.20 | 83.17 ±0.54 | 84.85 ±0.53 | **85.83 ±0.94** | 
 
-#### 2.1.2  Dialictal Arabic To English
+Metric is F1. 
 
-| **Dataset**  |  **Test Split** | **mT5** | **AraT5<sub>Tweet</sub>** | **AraT5<sub>MSA</sub>** | **AraT5** | 
-|----------------|:------:|:----------:|:-----------:|:-------:|:------:|
-|  ADPT [Zbib et al. (2012)](https://aclanthology.org/N12-1006.pdf)                 | Lev | 8.33 | 8.32 | **8.52** | 8.42  | 
-|  ADPT [Zbib et al. (2012)](https://aclanthology.org/N12-1006.pdf)                  | Egy | 12.57 | 11.25 | 12.38 | **12.92**  | 
-|  Bible I [Sajjad et al. (2020)](https://aclanthology.org/2020.coling-main.447.pdf)  | Tun | 8.08 | 5.86 | **8.52** | 7.94|   
-|  Bible I [Sajjad et al. (2020)](https://aclanthology.org/2020.coling-main.447.pdf)  | Mor |  7.21 | 4.69 | **7.83** | 6.82|   
-|  QAraCy  [Sajjad et al. (2020)](https://aclanthology.org/2020.coling-main.447.pdf)  | Qat  | **11.84**  | 11.11  | 11.42  | 10.57| 
+#### 2.1.2  Phrase Chuncking
 
-Metric is BLEU. 
+| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
+|----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
+|  Phrase-Chunk [(SADiLaR)](https://www.sadilar.org/)                  | 88.86 ±0.18 | 88.65 ±0.06 | 90.12 ±0.12 | 87.86 ±0.20 | 90.39 ±0.21 | 89.93 ±0.33 | **90.51 ±0.04** |
+
+Metric is F1. 
 
 #### 2.1.3  Foreign languages To MSA
 
