@@ -70,8 +70,8 @@ AfroNLU includes the following tasks: ```named entity recognition```,  ```phrase
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
-|  MasakaNER-v1 [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                   |81.41±0.26 |78.57 ±0.53 |84.16 ±0.45 |81.42 ±0.30 |81.23 ±0.32 |81.54 ±0.68 |**84.53 ±0.56** |
-|  MasakaNER-v2 [Ifeoluwa Adelani et al., 2022](https://aclanthology.org/2022.emnlp-main.298/)    |87.17 ±0.18 |84.82±0.96  |88.69 ±0.12 |86.22 ±0.06  |86.57 ±0.27 |86.69 ±0.29 |**88.86 ±0.25** |      
+|  MasakaNER-v1 [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                   |81.41±0.26 |78.57±0.53 |84.16±0.45 |81.42±0.30 |81.23±0.32 |81.54±0.68 |**84.53±0.56** |
+|  MasakaNER-v2 [Ifeoluwa Adelani et al., 2022](https://aclanthology.org/2022.emnlp-main.298/)    |87.17±0.18 |84.82±0.96  |88.69±0.12 |86.22±0.06  |86.57±0.27 |86.69±0.29 |**88.86±0.25** |      
 |  MasakaNER-east    [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                                     | 80.38 ±0.56 | 78.33 ±1.25 |  83.02 ±0.31 |  79.31 ±0.92 | 80.53 ±0.71 | 81.26 ±0.68 | **83.75 ±0.26** |       
 |  MasakaNER-eastwest  [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85 ±0.38 | 82.37 ±0.90 | **86.31 ±0.30**  | 82.98 ±0.44 |  82.90 ±0.49 | 83.67 ±0.44 | 85.94 ±0.27 |      
 |  MasakaNER-west⋆   [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85±0.79 | 83.99 ±0.39  | **86.78 ±0.44** | 84.08 ±0.32  | 82.06 ±0.67 | 83.45 ±0.81 | 86.27 ±0.94 |      
