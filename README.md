@@ -117,9 +117,9 @@ Metric is F1
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
-|  Bambara-V1 [(Diallo et al., 2021)](https://arxiv.org/abs/2108.02524)    | 47.17±1.83 |  64.56±1.71 | 59.40±0.56 | 65.06±2.08 |  65.07±2.59 | **65.76±2.02** | 63.36±3.31 |
-|  Pidgin Tweet [(Oyewusi et al., 2020)](https://arxiv.org/abs/2003.12450v1)     | 70.42±0.68 |  68.59±0.47 | **71.40±0.51** | 69.19±0.97 | 71.06±0.39 | 70.46±1.02 | 69.74±0.92 |
-|  YOSM [(Shode et al., 2022)](https://arxiv.org/abs/2204.09711)     | 85.57±1.09 |  85.25±0.25 | 87.46±0.42 | 88.66±0.23 | 86.86±0.95 | 85.58±1.51 | **87.86±0.81** |
+|  Bambara-V1 [(Diallo et al., 2021)](https://arxiv.org/abs/2108.02524)    | 47.17<sup>±1.83</sup> |  64.56<sup>±1.71</sup> | 59.40<sup>±0.56</sup> | 65.06<sup>±2.08</sup> |  65.07<sup>±2.59</sup> | **65.76<sup>±2.02</sup>** | 63.36<sup>±3.31</sup> |
+|  Pidgin Tweet [(Oyewusi et al., 2020)](https://arxiv.org/abs/2003.12450v1)     | 70.42<sup>±0.68</sup> |  68.59<sup>±0.47</sup> | **71.40<sup>±0.51</sup>** | 69.19<sup>±0.97</sup> | 71.06<sup>±0.39</sup> | 70.46<sup>±1.02</sup> | 69.74<sup>±0.92</sup> |
+|  YOSM [(Shode et al., 2022)](https://arxiv.org/abs/2204.09711)     | 85.57<sup>±1.09</sup> |  85.25<sup>±0.25</sup> | 87.46<sup>±0.42</sup> | 88.66<sup>±0.23</sup> | 86.86<sup>±0.95</sup> | 85.58<sup>±1.51</sup> | **87.86<sup>±0.81</sup>** |
 
 Metric is F1
 
@@ -127,8 +127,8 @@ Metric is F1
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
-|  Hausa-Topic [(Hedderich et al., 2020)](https://aclanthology.org/2020.emnlp-main.204/)    | 85.80±1.45 |  81.38±0.42 | 88.67±0.30 | **92.59±0.69**|  88.52±1.31 | 89.07±0.95 | 89.93±0.49 |
-|  Yoruba-Topic [(Hedderich et al., 2020)](https://aclanthology.org/2020.emnlp-main.204/)   | 54.69±2.89 |  71.79±1.43 | 75.13±1.40 | **81.79±0.66** | 65.22±4.72 | 66.34±4.09 | 79.87±1.61 |     
+|  Hausa-Topic [(Hedderich et al., 2020)](https://aclanthology.org/2020.emnlp-main.204/)    | 85.80<sup>±1.45</sup> |  81.38<sup>±0.42</sup> | 88.67<sup>±0.30</sup> | **92.59<sup>±0.69</sup>**|  88.52<sup>±1.31</sup> | 89.07<sup>±0.95</sup> | 89.93<sup>±0.49</sup> |
+|  Yoruba-Topic [(Hedderich et al., 2020)](https://aclanthology.org/2020.emnlp-main.204/)   | 54.69<sup>±2.89</sup> |  71.79<sup>±1.43</sup> | 75.13<sup>±1.40</sup> | **81.79<sup>±0.66** | 65.22<sup>±4.72</sup> | 66.34<sup>±4.09</sup> | 79.87<sup>±1.61</sup> |     
       
 Metric is F1
 
@@ -136,7 +136,7 @@ Metric is F1
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
-|  QA-Swahili [ (Clark et al., 2020a)](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00317/96451/TyDi-QA-A-Benchmark-for-Information-Seeking)    | 82.79±1.93 |  **83.40±0.78** | 79.94±0.39 | 57.3±1.8 |  79.76±0.52 | 81.25±1.33 | 80.01±0.78 |
+|  QA-Swahili [ (Clark et al., 2020a)](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00317/96451/TyDi-QA-A-Benchmark-for-Information-Seeking)    | 82.79<sup>±1.93</sup> |  **83.40<sup>±0.78</sup>** | 79.94<sup>±0.39</sup> | 57.3<sup>±1.8</sup> |  79.76<sup>±0.52</sup> | 81.25<sup>±1.33</sup> | 80.01<sup>±0.78</sup> |
 
 Metric is F1
 
