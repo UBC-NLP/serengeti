@@ -66,76 +66,72 @@ AfroNLU is composed of seven different tasks, covering both token and sentence l
 AfroNLU includes the following tasks: ```named entity recognition```,  ```phrase chuncking```,  ```part of speech tagging```, ```news classification```, ```sentiment analysis```,  ```topic classification```,  ```question answering``` and ```language identification```.
 
 ### 2.1 
-#### 2.1.1  Named Entity Recognition
+#### 2.1  Named Entity Recognition
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
 |  MasakaNER-v1 [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                   |81.41±0.26 |78.57±0.53 |84.16±0.45 |81.42±0.30 |81.23±0.32 |81.54±0.68 |**84.53±0.56** |
 |  MasakaNER-v2 [Ifeoluwa Adelani et al., 2022](https://aclanthology.org/2022.emnlp-main.298/)    |87.17±0.18 |84.82±0.96  |88.69±0.12 |86.22±0.06  |86.57±0.27 |86.69±0.29 |**88.86±0.25** |      
-|  MasakaNER-east    [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                                     | 80.38 ±0.56 | 78.33 ±1.25 |  83.02 ±0.31 |  79.31 ±0.92 | 80.53 ±0.71 | 81.26 ±0.68 | **83.75 ±0.26** |       
-|  MasakaNER-eastwest  [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85 ±0.38 | 82.37 ±0.90 | **86.31 ±0.30**  | 82.98 ±0.44 |  82.90 ±0.49 | 83.67 ±0.44 | 85.94 ±0.27 |      
-|  MasakaNER-west⋆   [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85±0.79 | 83.99 ±0.39  | **86.78 ±0.44** | 84.08 ±0.32  | 82.06 ±0.67 | 83.45 ±0.81 | 86.27 ±0.94 |      
-|  NCHLT-NER     [(SADiLaR)](https://www.sadilar.org/)| 71.41 ±0.07 | 70.58 ±0.26  | 72.27 ±0.14  | 68.74 ±0.29  | 64.46 ±0.37 | 64.42 ±0.24 | **73.18 ±0.24** |       
-|  Yoruba-Twi-NER  [Alabi et al., 2020](https://aclanthology.org/2020.lrec-1.335/)     | 61.18 ±2.19 |  70.37 ±0.61  | 58.48 ±1.85  | 69.24 ±3.05 | 61.77 ±1.24 | 57.99 ±2.61 | **71.25 ±1.73** | 
-|  WikiAnn  [(Pan et al.2017; Rahimi et al., 2019)](https://aclanthology.org/P19-1015/)     | 83.82 ±0.39 | 82.65 ±0.77 | 86.01 ±0.83  | 83.05 ±0.20 | 83.17 ±0.54 | 84.85 ±0.53 | **85.83 ±0.94** | 
+|  MasakaNER-east    [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African)                                     | 80.38±0.56 | 78.33±1.25 |  83.02±0.31 |  79.31±0.92 | 80.53±0.71 | 81.26±0.68 | **83.75±0.26** |       
+|  MasakaNER-eastwest  [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85±0.38 | 82.37±0.90 | **86.31±0.30**  | 82.98±0.44 |  82.90±0.49 | 83.67±0.44 | 85.94±0.27 |      
+|  MasakaNER-west⋆   [Ifeoluwa Adelani et al., 2021](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614/MasakhaNER-Named-Entity-Recognition-for-African) | 82.85±0.79 | 83.99±0.39  | **86.78±0.44** | 84.08±0.32  | 82.06±0.67 | 83.45±0.81 | 86.27±0.94 |      
+|  NCHLT-NER     [(SADiLaR)](https://www.sadilar.org/)| 71.41±0.07 | 70.58±0.26  | 72.27±0.14  | 68.74±0.29  | 64.46±0.37 | 64.42±0.24 | **73.18±0.24** |       
+|  Yoruba-Twi-NER  [Alabi et al., 2020](https://aclanthology.org/2020.lrec-1.335/)     | 61.18±2.19 |  70.37±0.61  | 58.48±1.85  | 69.24±3.05 | 61.77±1.24 | 57.99±2.61 | **71.25±1.73** | 
+|  WikiAnn  [(Pan et al.2017; Rahimi et al., 2019)](https://aclanthology.org/P19-1015/)     | 83.82±0.39 | 82.65±0.77 | 86.01±0.83  | 83.05±0.20 | 83.17±0.54 | 84.85±0.53 | **85.83±0.94** | 
 
 Metric is F1. 
 
-#### 2.1.2  Phrase Chuncking
+#### 2.2  Phrase Chuncking
 
 | **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
 |----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
-|  Phrase-Chunk [(SADiLaR)](https://www.sadilar.org/)                  | 88.86 ±0.18 | 88.65 ±0.06 | 90.12 ±0.12 | 87.86 ±0.20 | 90.39 ±0.21 | 89.93 ±0.33 | **90.51 ±0.04** |
+|  Phrase-Chunk [(SADiLaR)](https://www.sadilar.org/)                  | 88.86±0.18 | 88.65±0.06 | 90.12±0.12 | 87.86±0.20 | 90.39±0.21 | 89.93±0.33 | **90.51±0.04** |
 
 Metric is F1. 
 
-#### 2.1.3  Foreign languages To MSA
+#### 2.3  Part of Speech Tagging
 
-|  **Spit** | **mT5** | **AraT5<sub>MSA</sub>** |
-|:------:|:----------:|:-----------:|
-| EN &rarr; MSA   | 17.80 | **18.58** | 
-| DE &rarr; MSA  | 11.92	| **12.80** |
-| FR  &rarr; MSA  | 18.61	| **18.99** |
-| RU  &rarr; MSA  |  26.63	| **28.01** |
+| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
+|----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
+|  POS-tagging [(Onyenwe et al., 2018,2019)](https://dl.acm.org/doi/10.1145/3146387)                 | 85.50±0.08 |  85.42±0.13 | 85.39±0.21 | 85.43±0.05 | 85.50±0.16 | **85.61±0.13** | 85.54±0.08 |
+     
+Metric is F1. 
 
-Metric is BLEU. All the splits are from UN corpus [Ziemski et al. (2016)](https://aclanthology.org/L16-1561.pdf)    
+#### 2.4  News Classification
 
-### 2.2 Text Summarization
+| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
+|----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
+|  Amharic News [(Azime and Mohammed, 2021)](https://arxiv.org/abs/2103.05639)    | 84.97±0.55 |  59.01±1.47 | 86.18±0.85 | 86.54±1.20 |  86.50±0.71 | 86.34±0.30 | **86.82±0.72** |
+|  Kinnews [(Niyongabo et al., 2020)](https://aclanthology.org/2020.coling-main.480/)     | 76.58±0.70 |  77.45±0.43 | 79.13±0.53 | 80.40±1.50 | **81.43±1.02** | 80.38±1.36 | 79.80±0.68 |
+|  Kirnews [(Niyongabo et al., 2020)](https://aclanthology.org/2020.coling-main.480/)     | 57.18±3.44 |  74.71±2.56 | 87.67±0.92 | **89.59±0.27** | 78.75±3.24 | 86.60±1.28 |  87.53±2.31 |
+|  Swahili News V.0.2 [(David, 2020a,b)](https://dl.acm.org/doi/10.1145/3146387)     | 87.50±0.91 |  85.12±0.93 | 87.49±1.26 | 87.91±0.36 | 87.33±0.28 |  86.12±1.30 |  **88.24±0.99** |
 
-|**Metric** |  **Metric** | **mT5** | **AraT5<sub>Tweet</sub>** | **AraT5<sub>MSA</sub>** | **AraT5** |
-|:------:|:------:|:----------:|:-----------:|:-------:|:------:|
-|           | Rouge1 | **62.98** | 60.74  | 59.54 | 54.61 |   
-|EASC [El-Haj et al. (2010)](https://www.sciencedirect.com/science/article/pii/S0957417421000932)| Rouge2 | **51.93** | 48.89 | 47.37 | 43.58 |   
-|             | RougeL | **62.98** | 60.73 | 59.55 | 54.55 |   
-|                   | Rouge1 | 71.63 | **74.61** | 72.64 |  73.48 | 
-|WikiLin [Alami et al. (2021)](https://www.lancaster.ac.uk/people/elhaj/docs/LREC2010-MTurk-Final_v2.pdf)| Rouge2 |63.60 | **67.00** | 64.21| 65.09 |   
-|                  | RougeL | 71.56 | **74.52**| 72.57 | 73.37|   
+Metric is F1
 
- ### 2.3 News Title and Question Generation
+#### 2.5  Sentiment Analysis
 
-| **Dataset**  |  **Metric** | **mT5** | **AraT5<sub>Tweet</sub>** | **AraT5<sub>MSA</sub>** | **MSA** | 
-|----------------|:------:|:----------:|:-----------:|:-------:|:------:|
-|  ARGEN<sub>NTG</sub> [Nagoudi et al., 2020](https://aclanthology.org/2020.wanlp-1.7/)| BLEU | 19.49 | 20.00 | **20.61** | 20.51  | 
-| ARGEN<sub>QG</sub> [Nagoudi et al. (2021)](https://arxiv.org/abs/2109.12068) | BLEU | 15.29 | 12.06 | 14.18 | **16.99**|   
+| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
+|----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
+|  Bambara-V1 [(Diallo et al., 2021)](https://arxiv.org/abs/2108.02524)    | 47.17±1.83 |  64.56±1.71 | 59.40±0.56 | 65.06±2.08 |  65.07±2.59 | **65.76±2.02** | 63.36±3.31 |
+|  Pidgin Tweet [(Oyewusi et al., 2020)](https://arxiv.org/abs/2003.12450v1)     | 70.42±0.68 |  68.59±0.47 | **71.40±0.51** | 69.19±0.97 | 71.06±0.39 | 70.46±1.02 | 69.74±0.92 |
+|  YOSM [(Shode et al., 2022)](https://arxiv.org/abs/2204.09711)     | 85.57±1.09 |  85.25±0.25 | 87.46±0.42 | 88.66±0.23 | 86.86±0.95 | 85.58±1.51 | **87.86±0.81** |
 
-### 2.4 Paraphrasing and Transliteration
-| **Dataset**  |  **Metric** | **mT5** | **AraT5<sub>Tweet</sub>** | **AraT5<sub>MSA</sub>** | **MSA** | 
-|----------------|:------:|:----------:|:-----------:|:-------:|:------:|
-|  ARGEN<sub>PPH I</sub> [Cer et al. (2017)](https://arxiv.org/abs/1708.00055/)| BLEU | 19.32 | 18.17 | **19.38** | 19.03  | 
-| ARGEN<sub>PPH II</sub> [Alian et al. (2021)](https://dl.acm.org/doi/abs/10.1145/3368691.3368708) | BLEU | 19.25 | 17.34 | 19.43 | **18.42**|   
-| ARGEN<sub>TR</sub> [Song et al. (2014)](https://dl.acm.org/doi/abs/10.1145/3368691.3368708) | BLEU | 60.81 | 59.55 | **65.88** | 62.51| 
+Metric is F1
 
-### 2.5 Code-Switched Translation
-| **Dataset**  |  **Type** | **mT5** | **AraT5<sub>Tweet</sub>** | **AraT5<sub>MSA</sub>** | **MSA** | 
-|----------------|:------:|:----------:|:-----------:|:-------:|:------:|
-|  ALG-FR &rarr; FR     | Natural | 23.83	| **28.19**	| 26.27	| 26.17 <br>
-| JOR-EN &rarr; EN  |  Natural | **23.06**	| 21.60	| 21.58	| 20.45 | |
-|  MSA-FR &rarr; FR   | Synthetic| 11.06	| 8.99	| **11.53**	| 11.42 |
-|MSA-EN &rarr; EN    | Synthetic | 19.25 | 17.34 | 19.43 | **18.42**|  
-|  MSA-FR &rarr; MSA  | Synthetic| 12.93	| 12.14	| **14.39**	| 13.92 |
-|  MSA-EN &rarr; MSA  | Synthetic  | 19.82	| 18.43	| 23.89	| **24.37** |  
+#### 2.6  Topic Classification
 
-Metric is BLEU. All the **ARGEN<sub>CS</sub>** datasets are from: [Nagoudi et al. (2021)](https://arxiv.org/abs/2109.12068)
+| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
+|----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
+|  Hausa-Topic [(Hedderich et al., 2020)](https://aclanthology.org/2020.emnlp-main.204/)    | 85.80±1.45 |  81.38±0.42 | 88.67±0.30 | **92.59±0.69**|  88.52±1.31 | 89.07±0.95 | 89.93±0.49 |
+|  Yoruba-Topic [(Hedderich et al., 2020)](https://aclanthology.org/2020.emnlp-main.204/)   | 54.69±2.89 |  71.79±1.43 | 75.13±1.40 | **81.79±0.66** | 65.22±4.72 | 66.34±4.09 | 79.87±1.61 |     
+      
+Metric is F1
+
+#### 2.7  Question Answering
+
+| **Dataset**  |  **XLMR** | **mBERT** | **Afro-XLMR** | **AfriBERTa** |  **SERENGETI-E110** | **SERENGETI-E250** |  **SERENGETI** | 
+|----------------|:---------:|:-------------:|:-----------:|:----------:|:----------:|:-----------:|:-----------:|
+|  QA-Swahili [ (Clark et al., 2020a)](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00317/96451/TyDi-QA-A-Benchmark-for-Information-Seeking)    | 82.79±1.93 |  **83.40±0.78** | 79.94±0.39 | 57.3±1.8 |  79.76±0.52 | 81.25±1.33 | 80.01±0.78 |
 
 #  3. How to use AraT5 model
 
