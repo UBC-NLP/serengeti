@@ -150,11 +150,11 @@ We evaluate only Serengeti on the language identification datasets listed below 
 | **Dataset**  |  **Split** | **AfroLID** | **Serengeti** | 
 |----------------|:---------:|:-------------:|:---------:|
 |  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Amharic (amh) | 97.00 |  **99.50<sup>±0.01</sup>** |
-|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Hausa (hau)  | 89.00 |  **98.09<sup>±0.02</sup>** |
-|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Igbo  (ibo) | 46.00 | **95.28<sup>±0.00</sup>** |
-|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Nigerian Pidgin (pcm)   | 56.00 |  **77.73<sup>±0.01</sup>** |
-|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Swahili (swh)  | 96.00 |  **98.66<sup>±0.02</sup>** |
-|  AfriSenti [(Muhammad et al., 2022; Yimam et al., 2020)](https://arxiv.org/abs/2201.08277) | Yoruba (yor) | 82.00 |  **98.96<sup>±0.00</sup>** |
+|  Ditto | Hausa (hau)  | 89.00 |  **98.09<sup>±0.02</sup>** |
+|  Ditto | Igbo  (ibo) | 46.00 | **95.28<sup>±0.00</sup>** |
+|  Ditto  | Nigerian Pidgin (pcm)   | 56.00 |  **77.73<sup>±0.01</sup>** |
+|  Ditto  | Swahili (swh)  | 96.00 |  **98.66<sup>±0.02</sup>** |
+|  Ditto  | Yoruba (yor) | 82.00 |  **98.96<sup>±0.00</sup>** |
 
 Metric is F1
 
