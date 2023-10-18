@@ -38,8 +38,9 @@ To date, only ~31 out of 2,000 African languages are covered in existing languag
   - [2.8 Language Identification](#28-language-identification) 
 - [3. How to use Serengeti model](#3-how-to-use-serengeti-model)
 - [4. Ethics](#4-ethics)
-- [5. Citation](#6-citation)
-- [6. Acknowledgments](#7-acknowledgments)
+- [5. Support Languages](#5-supported-languages)
+- [6. Citation](#6-citation)
+- [7. Acknowledgments](#7-acknowledgments)
 
 ## 1. Our Language Models
 ## 1.1 Training Data
@@ -205,6 +206,9 @@ Serengeti aligns with Afrocentric NLP where the needs of African people is put i
 - Serengeti affords opportunities for language preservation for many African languages. To the best of our knowledge, Serengeti consists of languages that have not been used for any NLP task until now. We believe that it can help encourage  continued use of these languages in several domains, as well as trigger future development of language technologies for many of these languages.
 - To mitigate discrimination and bias, we adopt a manual curation of our datasets. Native speakers of Afrikaans, Yorùbá, Igbo, Hausa, Luganda, Kinyarwanda, Chichewa, Shona, Somali, Swahili, Xhosa, Bemba, and Zulu also manually evaluated a subset of the data to ensure its quality. The data collected for this work is taken from various domains to further ensure a better representation of the language usage of native speakers.
 - Although LMs are useful for a wide range of applications, they can also be misused. Serengeti is developed using publicly available datasets that may carry biases. Although we strive to perform analyses and diagnostic case studies to probe performance of our models, our investigations are by no means comprehensive nor guarantee absence of bias in the data. In particular, we do not have access to native speakers of most of the languages covered. This hinders our ability to investigate samples from each (or at least the majority) of the languages.
+
+## Supported languages
+Please refer to [**suported-languages**](https://github.com/UBC-NLP/serengeti/blob/main/supported-languages.txt)
 
 ## Citation
 If you use the pre-trained model (Serengeti) for your scientific publication, or if you find the resources in this repository useful, please cite our paper as follows (to be updated):
